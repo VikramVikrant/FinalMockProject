@@ -1,0 +1,52 @@
+<sly data-sly-use.model="com.ttn.amc.demoProject.core.models.ListOfBlogsModel">
+<sly data-sly-use.clientlibs="/libs/granite/sightly/templates/clientlib.html"
+         data-sly-call="${clientlibs.all @categories='demoProject.demo'}"></sly>
+    <head>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <style>
+        .fa {
+          font-size: 50px;
+          cursor: pointer;
+          user-select: none;
+        }
+        .fa:hover {
+          color: darkblue;
+        }
+        p {
+         color: darkblue;
+         }
+        </style>
+    </head>
+
+    <div class="container">
+        <div data-sly-list.a="${model.blogsFieldList}"class="row">
+            <div class="col-lg-4">
+                <div class="card">
+                    <img src="${a.blogimage}" class="card-img-top" alt="..." width="300px" height="300px">
+                    <div class="card-body">
+                        <h5 class="text-success card-title">${a.caption}</h5>
+                        <h2 class=" text-dark card-text" href="#">${a.blogtitle}</h2>
+                        <p class="mb-1 text-muted">${a.blogdate}</p>
+                        <p class="card-text mb-auto">${a.description}</p>
+                        <a href="${a.contReading}.html">Continue reading</a>
+                        <center>
+                            <p>Click on the like button for (like/dislike):</p>
+                            <i onclick="myFunction(this)" class="fa fa-thumbs-up"></i>
+                        </center>
+                        <script>
+                    function myFunction(x) {
+                      x.classList.toggle("fa-thumbs-down");
+                    }
+                    </script>
+                        <br>
+
+
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</sly>

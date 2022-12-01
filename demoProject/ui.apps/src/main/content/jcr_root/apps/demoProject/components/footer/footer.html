@@ -1,0 +1,31 @@
+<sly data-sly-use.model="com.ttn.amc.demoProject.core.models.Header">
+<sly data-sly-use.clientlibs="/libs/granite/sightly/templates/clientlib.html"
+        data-sly-call="${clientlibs.all @categories='demoProject.demo'}"></sly>
+
+    <p class="align-center">
+        <a href="${properties.backLink}.html">Back to top</a>
+    </p>
+
+    <footer class="blog-footer">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 ">
+                <div class="footer__block">
+                    <a target="" href="${properties.homeLink}.html" aria-label="PwC office locations">HomePage</a></t>
+                    <a target="" href="${properties.blogLink}.html" aria-label="PwC office locations">Blogs</a>
+                </div>
+            </div>
+        </div>
+        <p>© 2022  - 2023 TTN Bootcamp. All rights reserved.</p>
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="assets/js/vendor/holder.min.js"></script>
+    <script>
+      Holder.addTheme('thumb', {
+        bg: '#55595c',
+        fg: '#eceeef',
+        text: 'Thumbnail'
+      });
+    </script>
+</sly>

@@ -1,0 +1,22 @@
+<sly data-sly-use.model="com.ttn.amc.demoProject.core.models.Header">
+<sly data-sly-use.clientlibs="/libs/granite/sightly/templates/clientlib.html"
+        data-sly-call="${clientlibs.all @categories='demoProject.demo'}"></sly>
+
+
+    <body>
+    <main role="main" class="container">
+        <img src="${properties.image}" class="banner" alt="Bootcamp Banner" style="width:1050px;">
+    </main>
+    </body>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="assets/js/vendor/holder.min.js"></script>
+    <script>
+      Holder.addTheme('thumb', {
+        bg: '#55595c',
+        fg: '#eceeef',
+        text: 'Thumbnail'
+      });
+    </script>
+</sly>

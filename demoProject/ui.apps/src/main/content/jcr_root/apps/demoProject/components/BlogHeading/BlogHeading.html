@@ -1,0 +1,13 @@
+<sly data-sly-use.model="com.ttn.amc.demoProject.core.models.Header">
+<sly data-sly-use.clientlibs="/libs/granite/sightly/templates/clientlib.html"
+        data-sly-call="${clientlibs.all @categories='demoProject.demo'}"></sly>
+
+    <body>
+    <div class="blog-post">
+        <h2 class="blog-post-title">${properties.text}</h2>
+        <p class="blog-post-meta">January 1, 2014 by <a href="#">Mark</a></p>
+    </div>
+    </body>
+
+
+</sly>

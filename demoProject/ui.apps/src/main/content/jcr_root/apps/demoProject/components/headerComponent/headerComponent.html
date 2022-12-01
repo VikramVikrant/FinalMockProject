@@ -1,0 +1,33 @@
+<sly data-sly-use.model="com.ttn.amc.demoProject.core.models.Header">
+<sly data-sly-use.clientlibs="/libs/granite/sightly/templates/clientlib.html"
+        data-sly-call="${clientlibs.all @categories='demoProject.demo'}"></sly>
+    <div class="container">
+    <header class="blog-header py-3">
+        <div class="row flex-nowrap justify-content-between align-items-center">
+            <div class="col-12 text-center">
+
+                <a  class="blog-header-logo text-dark" href="${properties.homeLink}">
+                    <img src="${properties.buttonLinkTo}" class="ttn-logo">
+                    ${properties.text}
+
+                </a>
+
+            </div>
+        </div>
+    </header>
+    </div>
+    <div class="nav-scroller py-2 mb-3">
+        <nav class="nav d-flex">
+            <sly data-sly-test="${pageProperties.presets=='Home'}">
+            <a class="p-2 text-muted" href="${properties.homeLink}.html">Home</a>
+            </sly>
+                <sly data-sly-test="${pageProperties.presets=='Published Blogs'}">
+            <a class="p-2 text-muted" href="${properties.publishLink}.html">Published Blogs</a>
+                </sly>
+                <sly data-sly-test="${pageProperties.presets=='Both'}">
+                    <a class="p-2 text-muted" href="${properties.homeLink}.html">Home</a>
+                    <a class="p-2 text-muted" href="${properties.publishLink}.html">Published Blogs</a>
+                </sly>
+        </nav>
+    </div>
+</sly>
