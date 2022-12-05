@@ -1,0 +1,64 @@
+<sly data-sly-use.model="com.ttn.amc.demoProject.core.models.CollectDataModel">
+    <style>
+                .btn{
+                  background-color: #4CAF50;
+                  border: none;
+                  color: white;
+                  padding: 15px 32px;
+                  text-align: center;
+                  text-decoration: none;
+                  display: inline-block;
+                  font-size: 16px;
+                  margin: 4px 2px;
+                  cursor: pointer;
+                }
+                 table {
+                  font-family: arial, sans-serif;
+                  border-collapse: collapse;
+                  width: 100%;
+                }
+
+                td, th {
+                  border: 1px solid #dddddd;
+                  text-align: left;
+                  padding: 8px;
+                }
+
+                tr:nth-child(even) {
+                  background-color: #dddddd;
+                }
+             </style>
+
+    <input type="button" class="btn" value="ShowData" onclick="showStuff('answer1'); return false;">
+    <div id="answer1" style="display: none;">
+        <table>
+            <tr>
+                <th>Phone Number</th>
+                <th>DateOfBirth</th>
+                <th>Age</th>
+                <th>Name</th>
+            </tr>
+        </table>
+        <table>
+            <sly data-sly-list="${model.allChildren}">
+                <tr>
+                    <td>${item.phoneNo}</td>
+                    <td>${item.dob}</td>
+                    <td>${item.age}</td>
+                    <td>${item.Fullname}</td>
+                </tr>
+            </sly>
+
+
+        </table>
+
+
+    </div>
+
+
+    <script type="text/javascript">
+    function showStuff(id) {
+      document.getElementById(id).style.display = 'block';
+    }
+    </script>
+</sly>
